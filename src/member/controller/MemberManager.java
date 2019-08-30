@@ -9,10 +9,11 @@ import member.model.vo.Vip;
 import member.model.vo.Vvip;
 
 public class MemberManager{
-	public final int MAX_MEMBER = 40;
-	Member[] memberArr = new Member[MAX_MEMBER];
+	//field는 전부 다 private로 선언한다.
+	private final int MAX_MEMBER = 40;
+	private Member[] memberArr = new Member[MAX_MEMBER];
 
-	int index=0;
+	private int index=0;
 	
 	public void insertMember(Member m) {
 		if(m instanceof Silver) {
