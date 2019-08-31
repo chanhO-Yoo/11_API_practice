@@ -1,5 +1,13 @@
 package member.model.vo;
 
+/*
+ * 인터페이스의 추상메서드는
+ * 추상클래스인 경우에 한해서
+ * 선택적으로 구현할 수 있다.
+ *   - member 클래스에서 buy메서드를 구현할 수 있고,
+ *     구현하지 않고 member의 자식 클래스에서 구현해도 된다.
+ * 
+ */
 public abstract class Member implements Buyable{
 	//field
 	private String name;
