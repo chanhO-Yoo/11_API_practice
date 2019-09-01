@@ -58,10 +58,9 @@ public class Member {
 	
 	//method
 	public String information() {
-		String info = birth.get(Calendar.YEAR)+"/"+(birth.get(Calendar.MONTH)+1)+"/"+birth.get(Calendar.DATE);
-		System.out.println(info);
+		String info = birth.get(Calendar.YEAR)+"/"+(birth.get(Calendar.MONTH)-1)+"/"+birth.get(Calendar.DATE);
 		
-		String str = this.getMemberNo()+"\t"+this.getMemberName()+"\t"+this.getHeight()+"\t"+getWeight()+"\t"+getBirth();
+		String str = this.getMemberNo()+"\t"+this.getMemberName()+"\t"+this.getHeight()+"\t"+getWeight()+"\t"+info;
 		return str;
 	}
 }

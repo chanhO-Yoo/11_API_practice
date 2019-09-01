@@ -27,17 +27,16 @@ public class Run {
 			index2 = 0;
 			
 
-			for(int i=0;i<st.countTokens();i++) {
-				memArr[index].setMemberNo(Integer.parseInt(strArr[0]));
-				memArr[index].setMemberName(strArr[1]);
-				memArr[index].setHeight(Integer.parseInt(strArr[2]));
-				memArr[index].setWeight(Integer.parseInt(strArr[3]));
-				Calendar c = Calendar.getInstance();
-				c.set(1992, 12, 9);//Integer.parseInt(strArr[3])
-				memArr[index].setBirth(c);
-			}
+			memArr[index].setMemberNo(Integer.parseInt(strArr[0]));
+			memArr[index].setMemberName(strArr[1]);
+			memArr[index].setHeight(Integer.parseInt(strArr[2]));
+			memArr[index].setWeight(Integer.parseInt(strArr[3]));
+			Calendar c = Calendar.getInstance();
+			c.set(Integer.parseInt(strArr[4].substring(0,4)), Integer.parseInt(strArr[4].substring(4,6)), Integer.parseInt(strArr[4].substring(6,8)));//Integer.parseInt(strArr[4])
+			memArr[index].setBirth(c);
 			
-			System.out.println(memArr[0].getMemberNo());
+			System.out.println(memArr[index].information());
+			index++;
 		}
 		
 //		for(int i=0;i<index2;i++) {
